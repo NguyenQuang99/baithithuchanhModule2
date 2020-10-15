@@ -133,15 +133,18 @@ public class Main {
                         Contact contactSearch = manager.searchByNumber(input);
                         if (contactSearch == null) {
                             System.out.println("Không tìm thấy danh bạ");
-//                    } else {
-//                            System.out.println("Bạn có muốn xoá, Y/N ");
-//                            char confirm = scanner.next().toLowerCase().charAt(0);
-//                            if(confirm == "y") {
-//                                manager.remove(contact);
-//                            }
-//
-//                            }
-//                        }
+                   } else {
+                            System.out.println("Bạn có muốn xoá, Y/N ");
+                            char confirm = scanner.next().toLowerCase().charAt(0);
+                            if (confirm == 'y') {
+                                manager.remove(contactSearch);
+                                System.out.println("Xoá danh bạ thành công!");
+                                break;
+                            } else {
+                                System.out.println("Không xoá danh bạ!");
+                                break;
+                            }
+
                         }
 
 
